@@ -14,7 +14,7 @@
     ></script>
     <link rel="stylesheet" href="./scss/main.scss" />
   </head>
-  <body class="home">
+  <body class="contact">
     <div class="menu-icon">
       <i class="fas fa-bars"></i>
       <!-- <i class="fas fa-times"></i> -->
@@ -56,18 +56,25 @@
     </section>
     <section class="content-area">
       <div class="img-container">
-        <div class="user-img">
+        <div class="form-section">
           <form action="/" method="POST">
-            <input type="text" name="name" required />
-            <input type="email" name="email" required />
-            <input type="text" name="budget" />
-            <textarea name="message" rows="8" cols="60" required></textarea>
+            <h4>Send a Message</h4>
+            <input type="text" name="name" required placeholder="Name" />
+            <input type="email" name="email" required placeholder="Email" />
+            <input type="text" name="budget" placeholder="Budget" />
+            <textarea
+              name="message"
+              rows="12"
+              required
+              placeholder="Message"
+            ></textarea>
             <button type="submit">Send Message</button>
           </form>
         </div>
       </div>
       <div class="contact-section">
-        <div class="profile">
+        <div class="contact-info">
+          <h1>Contact Us</h1>
           <div class="contact-box">
             <h5>Phone</h5>
             <p>(452) 622 4378</p>
