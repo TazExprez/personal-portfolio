@@ -10,6 +10,7 @@
     width: 65%;
     background: white;
     height: 100%;
+    // overflow: auto;
 
     .img-container {
       display: inline-block;
@@ -63,6 +64,159 @@
           line-height: 1.4;
           margin: 0 0 2rem;
         }
+      }
+    }
+  }
+}
+
+// Phone
+@media (max-width: 767px) {
+  .home {
+    .menu-icon {
+      top: -3px;
+      right: 20px;
+      // color: white;
+
+      .fas {
+        color: white;
+      }
+    }
+
+    .content-area {
+      overflow: auto;
+      height: auto;
+
+      &:after {
+        display: table;
+        clear: both;
+      }
+    }
+
+    .info-section {
+      // display: none;
+      padding: 10px 20px;
+      /* width: 35%; */
+      position: static;
+      /* top: 0; */
+      /* bottom: 0; */
+      /* left: 0; */
+
+      .logo {
+        height: 50px;
+        width: 70px;
+        font-size: 1rem;
+      }
+
+      .info-box {
+        display: none;
+      }
+    }
+
+    .content-area {
+      margin-left: 0;
+      width: 100%;
+
+      .img-container {
+        padding: 56px 20px 0;
+        position: absolute;
+        height: 100%;
+
+        .user-img {
+          position: static;
+          width: 100%;
+        }
+      }
+
+      .profile-section {
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+
+        // .primary-btn,
+        // .ghost-btn {
+        //   margin-bottom: 20px;
+        // }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+  .home {
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+
+        .user-img {
+          position: static;
+          width: 100%;
+        }
+      }
+
+      .profile-section {
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+      }
+    }
+  }
+}
+
+// Laptop
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home {
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+        float: left;
+
+        .user-img {
+          position: static;
+          width: 100%;
+        }
+      }
+
+      .primary-btn,
+      .ghost-btn {
+        margin-bottom: 20px;
+      }
+
+      .profile-section {
+        width: 70%;
+        float: left;
+        padding: 20% 20px 0;
+        max-width: 800px;
+      }
+
+      // .primary-btn,
+      // .ghost-btn {
+      //   margin-bottom: 20px;
+      // }
+    }
+  }
+}
+
+// Extra Large
+@media (min-width: 1200px) {
+  .home {
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+        float: left;
+
+        .user-img {
+          // position: static;
+          // width: 100%;
+        }
+      }
+
+      .profile-section {
+        width: 70%;
+        float: left;
+        padding: 20% 60px 0;
+        max-width: 800px;
+        // padding: 20% 20px 0;
       }
     }
   }
