@@ -136,6 +136,12 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   height: 100%; }
 
+a {
+  text-decoration: none; }
+
+.menu-icon {
+  cursor: pointer; }
+
 .menu-icon {
   position: fixed;
   right: 0;
@@ -320,13 +326,6 @@ body {
     right: 20px; }
     .home .menu-icon .fas {
       color: white; }
-  .home .content-area {
-    overflow: auto;
-    height: auto; }
-    .home .content-area:after {
-      content: "";
-      display: table;
-      clear: both; }
   .home .info-section {
     padding: 10px 20px;
     /* width: 35%; */
@@ -541,6 +540,10 @@ body {
   background: white;
   height: 100%;
   overflow: hidden; }
+  .work .content-area:after {
+    content: "";
+    display: table;
+    clear: both; }
   .work .content-area .work-section {
     margin-bottom: 56px; }
     .work .content-area .work-section h1 {
@@ -550,7 +553,9 @@ body {
       margin-bottom: 56px; }
     .work .content-area .work-section .project-section {
       display: grid;
-      grid-template-columns: 1fr 1fr; }
+      grid-template-columns: 1fr 1fr;
+      width: calc(100% - 112px);
+      margin-left: 56px; }
       .work .content-area .work-section .project-section .project-box {
         position: relative;
         padding: 30px;
@@ -622,12 +627,6 @@ body {
     right: 20px; }
     .work .menu-icon .fas {
       color: white; }
-  .work .content-area {
-    overflow: auto;
-    height: auto; }
-    .work .content-area:after {
-      display: table;
-      clear: both; }
   .work .info-section {
     padding: 10px 20px;
     /* width: 35%; */
@@ -642,12 +641,10 @@ body {
     .work .info-section .info-box {
       display: none; }
   .work .content-area {
+    overflow: auto;
+    height: auto;
     margin-left: 0;
     width: 100%; }
-    .work .content-area:after {
-      content: "";
-      display: table;
-      clear: both; }
     .work .content-area .img-container {
       width: 100%;
       padding: 56px 20px 0;
@@ -657,20 +654,25 @@ body {
         width: 100%;
         height: auto;
         overflow: auto; }
-    .work .content-area .work-section {
+    .work .content-area .work-section .project-section {
+      margin: 0;
       width: 100%;
-      float: left;
-      padding: 20% 20px 0; } }
+      grid-template-columns: 1fr; }
+      .work .content-area .work-section .project-section .project-box .grey-bg .project-info {
+        padding: 30px; }
+        .work .content-area .work-section .project-section .project-box .grey-bg .project-info .fa-long-arrow-alt-right {
+          display: none; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .work .info-section .icon-section a {
-    font-size: 1.4rem; }
+  .work .info-section {
+    width: 25%;
+    padding: 20px; }
+    .work .info-section .icon-section a {
+      font-size: 1.2rem; }
   .work .content-area {
+    width: 75%;
+    margin-left: 25%;
     height: auto; }
-    .work .content-area:after {
-      content: "";
-      display: table;
-      clear: both; }
     .work .content-area .img-container {
       width: 100%;
       padding: 56px 20px 0;
@@ -678,23 +680,17 @@ body {
       .work .content-area .img-container .form-section {
         position: static;
         width: 100%; }
-    .work .content-area .work-section {
-      width: 70%;
-      float: left;
-      padding: 20% 20px 0; } }
+    .work .content-area .work-section .project-section {
+      grid-template-columns: 1fr; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .work .info-section {
     width: 30%;
     padding: 56px 30px; }
     .work .info-section .icon-section a {
-      font-size: 1.4rem; }
+      font-size: 1.2rem; }
   .work .content-area {
     height: auto; }
-    .work .content-area:after {
-      content: "";
-      display: table;
-      clear: both; }
     .work .content-area .img-container {
       padding: 56px 20px 0;
       float: left;
@@ -705,21 +701,17 @@ body {
         width: 100%;
         float: left;
         height: auto; }
-    .work .content-area .primary-btn,
-    .work .content-area .ghost-btn {
-      margin-bottom: 20px; }
-    .work .content-area .work-section {
-      width: 70%;
-      float: left;
-      padding: 20% 20px 0;
-      max-width: 800px; } }
+    .work .content-area .work-section .project-section {
+      grid-template-columns: 1fr; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1499px) {
   .work .info-section {
     width: 30%;
     padding: 56px 30px; }
     .work .info-section .icon-section a {
-      font-size: 1.4rem; } }
+      font-size: 1.4rem; }
+  .work .content-area .work-section .project-section {
+    grid-template-columns: 1fr; } }
 
 .contact .info-section {
   padding: 54px;

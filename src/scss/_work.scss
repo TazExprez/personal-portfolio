@@ -20,6 +20,12 @@
     // padding: 56px;
     overflow: hidden;
 
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
     .work-section {
       margin-bottom: 56px;
 
@@ -33,6 +39,8 @@
       .project-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        width: calc(100% - 112px);
+        margin-left: 56px;
 
         .project-box {
           position: relative;
@@ -142,17 +150,6 @@
       }
     }
 
-    .content-area {
-      overflow: auto;
-      // height: auto !important;
-      height: auto;
-
-      &:after {
-        display: table;
-        clear: both;
-      }
-    }
-
     .info-section {
       // display: none;
       padding: 10px 20px;
@@ -174,14 +171,11 @@
     }
 
     .content-area {
+      overflow: auto;
+      // height: auto !important;
+      height: auto;
       margin-left: 0;
       width: 100%;
-
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
 
       .img-container {
         width: 100%;
@@ -199,14 +193,23 @@
       }
 
       .work-section {
-        width: 100%;
-        float: left;
-        padding: 20% 20px 0;
+        .project-section {
+          margin: 0;
+          width: 100%;
+          grid-template-columns: 1fr;
 
-        // .primary-btn,
-        // .ghost-btn {
-        //   margin-bottom: 20px;
-        // }
+          .project-box {
+            .grey-bg {
+              .project-info {
+                padding: 30px;
+
+                .fa-long-arrow-alt-right {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -216,21 +219,22 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .work {
     .info-section {
+      width: 25%;
+      padding: 20px;
       .icon-section {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+
         a {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       }
     }
 
     .content-area {
+      width: 75%;
+      margin-left: 25%;
       height: auto;
-
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
 
       .img-container {
         width: 100%;
@@ -246,9 +250,9 @@
       }
 
       .work-section {
-        width: 70%;
-        float: left;
-        padding: 20% 20px 0;
+        .project-section {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }
@@ -263,19 +267,13 @@
 
       .icon-section {
         a {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       }
     }
 
     .content-area {
       height: auto;
-
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
 
       .img-container {
         padding: 56px 20px 0;
@@ -292,28 +290,17 @@
         }
       }
 
-      .primary-btn,
-      .ghost-btn {
-        margin-bottom: 20px;
-      }
-
       .work-section {
-        width: 70%;
-        float: left;
-        padding: 20% 20px 0;
-        max-width: 800px;
+        .project-section {
+          grid-template-columns: 1fr;
+        }
       }
-
-      // .primary-btn,
-      // .ghost-btn {
-      //   margin-bottom: 20px;
-      // }
     }
   }
 }
 
 // Extra Large
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1499px) {
   .work {
     .info-section {
       width: 30%;
@@ -325,26 +312,13 @@
         }
       }
     }
-    //   .content-area {
-    //     .img-container {
-    //       padding: 56px 20px 0;
-    //       float: left;
 
-    //       .form-section {
-    //         // position: static;
-    //         // width: 100%;
-    //         left: -157px;
-    //         width: 400px;
-    //       }
-    //     }
-
-    //     .work-section {
-    //       width: 70%;
-    //       float: left;
-    //       padding: 20% 60px 0;
-    //       max-width: 800px;
-    //       // padding: 20% 20px 0;
-    //     }
-    //   }
+    .content-area {
+      .work-section {
+        .project-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
   }
 }

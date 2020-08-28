@@ -82,16 +82,17 @@
       }
     }
 
-    .content-area {
-      overflow: auto;
-      height: auto;
+    // .content-area {
+    //   overflow: auto;
+    //   // overflow: hidden;
+    //   height: auto;
 
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-    }
+    //   &:after {
+    //     content: "";
+    //     display: table;
+    //     clear: both;
+    //   }
+    // }
 
     .info-section {
       // display: none;
@@ -132,11 +133,6 @@
         width: 70%;
         float: right;
         padding: 20% 20px 0;
-
-        // .primary-btn,
-        // .ghost-btn {
-        //   margin-bottom: 20px;
-        // }
       }
     }
   }

@@ -10,6 +10,14 @@ body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
 // We are styling the .hamburger-icon, .primary-btn, and .ghost-btn buttons from the #content-area section in this main.scss file, instead of the _home.scss file, because we might use them in other places as well.
 
 .menu-icon {
@@ -108,8 +116,14 @@ body {
 
 .menu-active {
   .menu-icon {
+    // cursor: pointer;
+
     .fas {
       color: white;
+    }
+
+    &:hover {
+      // cursor: pointer;
     }
   }
 
