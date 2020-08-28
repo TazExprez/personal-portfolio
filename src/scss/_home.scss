@@ -87,6 +87,7 @@
       height: auto;
 
       &:after {
+        content: "";
         display: table;
         clear: both;
       }
@@ -144,7 +145,21 @@
 // Tablet
 @media (min-width: 768px) and (max-width: 991px) {
   .home {
+    .info-section {
+      width: 30%;
+      padding: 56px 30px;
+
+      .icon-section {
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
     .content-area {
+      margin-left: 30%;
+      width: 70%;
+
       .img-container {
         padding: 56px 20px 0;
 
@@ -198,16 +213,30 @@
 }
 
 // Extra Large
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1500px) {
   .home {
+    .info-section {
+      width: 20%;
+      padding: 56px 30px;
+
+      .icon-section {
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
     .content-area {
+      width: 80%;
+      margin-left: 20%;
+
       .img-container {
         padding: 56px 20px 0;
         float: left;
 
         .user-img {
-          // position: static;
-          // width: 100%;
+          position: static;
+          width: 100%;
         }
       }
 
