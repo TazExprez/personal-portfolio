@@ -328,11 +328,7 @@ a {
       color: white; }
   .home .info-section {
     padding: 10px 20px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .home .info-section .logo {
       height: 50px;
       width: 70px;
@@ -475,11 +471,7 @@ a {
         grid-template-columns: 1fr; }
   .resume .info-section {
     padding: 10px 30px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .resume .info-section .logo {
       height: 50px;
       width: 70px;
@@ -629,11 +621,7 @@ a {
       color: white; }
   .work .info-section {
     padding: 10px 20px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .work .info-section .logo {
       height: 50px;
       width: 70px;
@@ -821,11 +809,7 @@ a {
       clear: both; }
   .contact .info-section {
     padding: 10px 20px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .contact .info-section .logo {
       height: 50px;
       width: 70px;

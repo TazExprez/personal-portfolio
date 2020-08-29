@@ -61,16 +61,10 @@
 
 // Phone
 @media (min-width: 0px) and (max-width: 767px) {
-  // html,
-  // body {
-  //   height: auto;
-  // }
-
   .resume {
-    .menu-icon {
+    .open-menu-icon {
       top: -3px;
       right: 20px;
-      // color: white;
 
       .fas {
         color: white;
@@ -78,8 +72,6 @@
     }
 
     .content-area {
-      // overflow: auto;
-      // height: auto !important;
       height: auto;
       margin-left: 0;
       width: 100%;
@@ -92,7 +84,6 @@
 
       .scroll-section {
         padding: 50px 20px;
-        // width: 100%;
         height: auto;
         overflow: auto;
       }
@@ -107,14 +98,8 @@
     }
 
     .info-section {
-      // display: none;
-      // padding: 10px 20px;
       padding: 10px 30px;
-      /* width: 35%; */
       position: static;
-      /* top: 0; */
-      /* bottom: 0; */
-      /* left: 0; */
 
       .logo {
         height: 50px;
@@ -146,7 +131,6 @@
     .content-area {
       height: auto;
       width: 70%;
-      // float: right;
       margin-left: 30%;
 
       &:after {
@@ -182,7 +166,6 @@
     .content-area {
       height: auto;
       width: 70%;
-      // float: right;
       margin-left: 30%;
 
       &:after {
@@ -205,17 +188,6 @@
           font-size: 1.4rem;
         }
       }
-    }
-
-    .content-area {
-    }
-  }
-}
-
-// Extra Extra Large
-@media (min-width: 1500px) {
-  .resume {
-    .content-area {
     }
   }
 }

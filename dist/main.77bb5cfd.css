@@ -135,26 +135,30 @@ body {
   background: #4b21ff;
   font-family: "Barlow Semi Condensed", sans-serif;
   height: 100%; }
+  html.active,
+  body.active {
+    overflow: hidden; }
 
 a {
   text-decoration: none; }
 
-.menu-icon {
-  cursor: pointer; }
+.open-menu-icon {
+  z-index: 10;
+  opacity: 1;
+  transition: all 0.5s ease-in-out; }
 
-.menu-icon {
+.icon-properties {
   position: fixed;
   right: 0;
   top: 36px;
   right: 36px;
   padding: 20px;
-  z-index: 11; }
-  .menu-icon .fas {
+  cursor: pointer; }
+  .icon-properties .fas {
     font-size: 2rem;
     color: #4b21ff; }
 
 .primary-btn {
-  text-decoration: none;
   background: #4b21ff;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -170,7 +174,6 @@ a {
     background: black; }
 
 .ghost-btn {
-  text-decoration: none;
   border: 4px solid #4b21ff;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -192,42 +195,48 @@ a {
   margin-right: 15px;
   margin-bottom: 20px; }
 
-#menu {
-  background: #4b21ff;
+#opened-menu {
+  background: rgba(75, 33, 255, 0.9);
   position: fixed;
   width: 100%;
   top: 0;
-  bottom: 0;
+  height: 100%;
   transform: translate3d(-100%, 0, 0);
-  z-index: 10;
+  z-index: 11;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 1;
   transition: all 0.5s ease-in-out; }
-  #menu nav {
+  #opened-menu .close-menu-icon {
+    z-index: 12; }
+    #opened-menu .close-menu-icon .fa-times {
+      color: white; }
+      #opened-menu .close-menu-icon .fa-times:hover {
+        color: #a9a9a9; }
+  #opened-menu.active {
+    transform: translate3d(0, 0, 0); }
+  #opened-menu nav {
     width: 400px;
     text-align: center; }
-    #menu nav a {
+    #opened-menu nav a {
       font-size: 2.3rem;
       padding: 1rem;
       display: block;
-      text-decoration: none;
       color: white; }
-      #menu nav a:hover {
+      #opened-menu nav a:hover {
         color: #a9a9a9; }
-
-.menu-active .menu-icon .fas {
-  color: white; }
-
-.menu-active #menu {
-  transform: translate3d(0, 0, 0); }
 
 .scroll-section {
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 56px; }
+
+@media (max-width: 767px) {
+  #opened-menu .close-menu-icon {
+    top: -3px;
+    right: 20px; } }
 
 .logo {
   text-transform: uppercase;
@@ -321,18 +330,14 @@ a {
       margin: 0 0 2rem; }
 
 @media (max-width: 767px) {
-  .home .menu-icon {
+  .home .open-menu-icon {
     top: -3px;
     right: 20px; }
-    .home .menu-icon .fas {
+    .home .open-menu-icon .fas {
       color: white; }
   .home .info-section {
     padding: 10px 20px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .home .info-section .logo {
       height: 50px;
       width: 70px;
@@ -452,10 +457,10 @@ a {
           margin-bottom: 1rem; }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  .resume .menu-icon {
+  .resume .open-menu-icon {
     top: -3px;
     right: 20px; }
-    .resume .menu-icon .fas {
+    .resume .open-menu-icon .fas {
       color: white; }
   .resume .content-area {
     height: auto;
@@ -475,11 +480,7 @@ a {
         grid-template-columns: 1fr; }
   .resume .info-section {
     padding: 10px 30px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .resume .info-section .logo {
       height: 50px;
       width: 70px;
@@ -622,18 +623,14 @@ a {
           margin-bottom: 1rem; }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  .work .menu-icon {
+  .work .open-menu-icon {
     top: -3px;
     right: 20px; }
-    .work .menu-icon .fas {
+    .work .open-menu-icon .fas {
       color: white; }
   .work .info-section {
     padding: 10px 20px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .work .info-section .logo {
       height: 50px;
       width: 70px;
@@ -808,10 +805,10 @@ a {
         margin: 0 0 2rem; }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  .contact .menu-icon {
+  .contact .open-menu-icon {
     top: -3px;
     right: 20px; }
-    .contact .menu-icon .fas {
+    .contact .open-menu-icon .fas {
       color: white; }
   .contact .content-area {
     overflow: auto;
@@ -821,11 +818,7 @@ a {
       clear: both; }
   .contact .info-section {
     padding: 10px 20px;
-    /* width: 35%; */
-    position: static;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */ }
+    position: static; }
     .contact .info-section .logo {
       height: 50px;
       width: 70px;

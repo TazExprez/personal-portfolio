@@ -17,7 +17,6 @@
     background: white;
     height: 100%;
     // This is a trick of removing the padding from the .content-area selector in this .scss file and putting it inside the .scroll-section selector inside of the main.scss file.
-    // padding: 56px;
     overflow: hidden;
 
     &:after {
@@ -95,7 +94,6 @@
               .project-details {
                 position: relative;
                 font-size: 1.1rem;
-                // text-transform: capitalize;
                 margin: 0 0 1rem;
                 transform: translate3d(-200px, 0, 0);
                 opacity: 0;
@@ -140,10 +138,9 @@
 // Phone
 @media (min-width: 0px) and (max-width: 767px) {
   .work {
-    .menu-icon {
+    .open-menu-icon {
       top: -3px;
       right: 20px;
-      // color: white;
 
       .fas {
         color: white;
@@ -151,14 +148,8 @@
     }
 
     .info-section {
-      // display: none;
       padding: 10px 20px;
-      /* width: 35%; */
       position: static;
-      /* top: 0; */
-      /* bottom: 0; */
-      /* left: 0; */
-
       .logo {
         height: 50px;
         width: 70px;
@@ -172,7 +163,6 @@
 
     .content-area {
       overflow: auto;
-      // height: auto !important;
       height: auto;
       margin-left: 0;
       width: 100%;
@@ -180,8 +170,6 @@
       .img-container {
         width: 100%;
         padding: 56px 20px 0;
-        // position: absolute;
-        // height: 100%;
         height: auto;
 
         .form-section {
@@ -222,9 +210,6 @@
       width: 25%;
       padding: 20px;
       .icon-section {
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-
         a {
           font-size: 1.2rem;
         }
@@ -244,8 +229,6 @@
         .form-section {
           position: static;
           width: 100%;
-          // height: auto;
-          // overflow: auto;
         }
       }
 
@@ -286,7 +269,6 @@
           width: 100%;
           float: left;
           height: auto;
-          // overflow: auto;
         }
       }
 
