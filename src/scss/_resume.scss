@@ -88,6 +88,10 @@
 
         .xp-section {
           grid-template-columns: 1fr;
+
+          .xp-box {
+            padding: 0;
+          }
         }
       }
     }

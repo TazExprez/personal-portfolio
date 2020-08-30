@@ -508,6 +508,8 @@ a {
       width: 100%; }
       .resume .content-area .category .xp-section {
         grid-template-columns: 1fr; }
+        .resume .content-area .category .xp-section .xp-box {
+          padding: 0; }
   .resume .info-section {
     padding: 10px 30px;
     position: static; }
