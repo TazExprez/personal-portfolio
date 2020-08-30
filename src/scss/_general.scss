@@ -194,8 +194,8 @@ a {
 
   #opened-menu {
     .close-menu-icon {
-      top: -3px;
-      right: 20px;
+      top: 0;
+      right: 0;
     }
   }
 
@@ -204,8 +204,6 @@ a {
   }
 
   .content-area {
-    // top: 70px;
-
     .scroll-section {
       padding: 106px 56px 56px;
     }

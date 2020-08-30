@@ -186,7 +186,18 @@
 // Tablet
 @media (min-width: 768px) and (max-width: 991px) {
   .contact {
+    // .info-section {
+    //   .icon-section {
+    //     a {
+    //       font-size: 1.4rem;
+    //     }
+    //   }
+    // }
+
     .info-section {
+      width: 30%;
+      padding: 56px 30px;
+
       .icon-section {
         a {
           font-size: 1.4rem;
@@ -204,7 +215,7 @@
       }
 
       .img-container {
-        width: 100%;
+        width: 83%;
         padding: 56px 20px 0;
         height: auto;
 
@@ -236,6 +247,7 @@
       }
 
       .img-container {
+        width: 87% !important;
         padding: 56px 20px 0;
         float: left;
         height: auto;
@@ -265,8 +277,19 @@
 }
 
 // Extra Large
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1550px) {
   .contact {
+    .info-section {
+      width: 20%;
+      padding: 56px 30px;
+
+      .icon-section {
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
     .content-area {
       .img-container {
         padding: 56px 20px 0;
@@ -289,7 +312,7 @@
 }
 
 // Extra Extra Large
-@media (min-width: 1500px) {
+@media (min-width: 1551px) {
   .contact {
     .content-area {
       .img-container {

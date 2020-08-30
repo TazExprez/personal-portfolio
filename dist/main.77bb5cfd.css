@@ -273,8 +273,8 @@ a {
   .mobile-top-navigation-bar {
     display: block; }
   #opened-menu .close-menu-icon {
-    top: -3px;
-    right: 20px; }
+    top: 0;
+    right: 0; }
   .info-section {
     display: none; }
   .content-area .scroll-section {
@@ -427,7 +427,7 @@ a {
     padding: 20% 20px 0;
     max-width: 800px; } }
 
-@media (min-width: 1200px) and (max-width: 1500px) {
+@media (min-width: 1200px) and (max-width: 1550px) {
   .home .info-section {
     width: 20%;
     padding: 56px 30px; }
@@ -862,8 +862,11 @@ a {
       padding: 20% 20px 0; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .contact .info-section .icon-section a {
-    font-size: 1.4rem; }
+  .contact .info-section {
+    width: 30%;
+    padding: 56px 30px; }
+    .contact .info-section .icon-section a {
+      font-size: 1.4rem; }
   .contact .content-area {
     height: auto; }
     .contact .content-area:after {
@@ -871,7 +874,7 @@ a {
       display: table;
       clear: both; }
     .contact .content-area .img-container {
-      width: 100%;
+      width: 83%;
       padding: 56px 20px 0;
       height: auto; }
       .contact .content-area .img-container .form-section {
@@ -890,6 +893,7 @@ a {
       display: table;
       clear: both; }
     .contact .content-area .img-container {
+      width: 87% !important;
       padding: 56px 20px 0;
       float: left;
       height: auto;
@@ -908,7 +912,12 @@ a {
       padding: 20% 20px 0;
       max-width: 800px; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1550px) {
+  .contact .info-section {
+    width: 20%;
+    padding: 56px 30px; }
+    .contact .info-section .icon-section a {
+      font-size: 1.4rem; }
   .contact .content-area .img-container {
     padding: 56px 20px 0;
     float: left; }
@@ -921,7 +930,7 @@ a {
     padding: 20% 60px 0;
     max-width: 800px; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1551px) {
   .contact .content-area .img-container {
     padding: 56px 20px 0;
     float: left; }
