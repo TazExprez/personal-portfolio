@@ -18,27 +18,71 @@ a {
   text-decoration: none;
 }
 
+.mobile-top-navigation-bar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $color1;
+  z-index: 350;
+  width: 100%;
+  height: 70px;
+
+  .mobile-logo {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 60px;
+    height: 50px;
+    border: 5px solid white;
+    color: white;
+    text-align: center;
+    line-height: 2;
+    margin: 10px;
+  }
+
+  .mobile-open-menu-icon {
+    width: 60px;
+    height: 50px;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    .fas {
+      color: white;
+      font-size: 2rem;
+    }
+  }
+}
+
 // We are styling the .hamburger-icon, .primary-btn, and .ghost-btn buttons from the #content-area section in this main.scss file, instead of the _home.scss file, because we might use them in other places as well.
 
 .open-menu-icon {
   z-index: 10;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
+
+  .fas {
+    color: $color1;
+  }
 }
 
 .icon-properties {
-  // display: block;
   position: fixed;
-  right: 0;
   top: 36px;
   right: 36px;
+  cursor: pointer;
+
   // You want to add this padding around the .hamburger-icon button so that users don't have to click on the button exactly right on top.  You also want to change the top and right values by removing 20px from each, which was the amount added by the padding.  This way your button does not change its location.
   padding: 20px;
-  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 
   .fas {
     font-size: 2rem;
-    color: $color1;
   }
 }
 
@@ -93,11 +137,10 @@ a {
   top: 0;
   height: 100%;
   transform: translate3d(-100%, 0, 0);
-  z-index: 11;
+  z-index: 360;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
   transition: all 0.5s ease-in-out;
 
   .close-menu-icon {
@@ -141,10 +184,30 @@ a {
 }
 
 @media (max-width: 767px) {
+  .open-menu-icon {
+    display: none;
+  }
+
+  .mobile-top-navigation-bar {
+    display: block;
+  }
+
   #opened-menu {
     .close-menu-icon {
       top: -3px;
       right: 20px;
+    }
+  }
+
+  .info-section {
+    display: none;
+  }
+
+  .content-area {
+    // top: 70px;
+
+    .scroll-section {
+      padding: 106px 56px 56px;
     }
   }
 }

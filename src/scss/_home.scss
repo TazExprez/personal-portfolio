@@ -71,38 +71,20 @@
 // Phone
 @media (max-width: 767px) {
   .home {
-    .open-menu-icon {
-      top: -3px;
-      right: 20px;
-
-      .fas {
-        color: white;
-      }
-    }
-
-    .info-section {
-      padding: 10px 20px;
-      position: static;
-
-      .logo {
-        height: 50px;
-        width: 70px;
-        font-size: 1rem;
-      }
-
-      .info-box {
-        display: none;
-      }
-    }
-
     .content-area {
+      position: relative;
+      overflow: auto;
+
+      top: 70px;
+      left: 0;
       margin-left: 0;
       width: 100%;
+      height: calc(100% - 70px);
 
       .img-container {
         padding: 56px 20px 0;
         position: absolute;
-        height: 100%;
+        height: calc(100% - 70px);
 
         .user-img {
           position: static;

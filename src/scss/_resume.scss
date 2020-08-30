@@ -74,18 +74,13 @@
     .content-area {
       height: auto;
       margin-left: 0;
+      top: 70px;
       width: 100%;
 
       &:after {
         content: "";
         display: table;
         clear: both;
-      }
-
-      .scroll-section {
-        padding: 50px 20px;
-        height: auto;
-        overflow: auto;
       }
 
       .category {
